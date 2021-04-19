@@ -24,16 +24,10 @@ The designs were created to the following widths:
 
 ### Gradient
 
-Background gradient - Intro/CTA mobile nav:
-
-- Very light red: hsl(13, 100%, 72%)
-- Light red: hsl(353, 100%, 62%)
-
-Background gradient - body:
-
-- Very dark gray blue: hsl(237, 17%, 21%)
-- Very dark desaturated blue: hsl(237, 23%, 32%)
-
+- White (text): hsl(0, 0%, 100%)
+- Grayish blue (footer text): hsl(240, 2%, 79%)
+- Very dark grayish blue (body copy): hsl(207, 13%, 34%)
+- Very dark black blue (footer background): hsl(240, 10%, 16%)
 ## Typography
 
 ### Body Copy
