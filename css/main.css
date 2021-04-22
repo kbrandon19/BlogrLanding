@@ -62,31 +62,188 @@ body{
 }
 
 
-nav{
-    display:flex;
-    width:100%;
-    justify-content: space-around;
-    align-items:center;
-    padding:4rem 1.5rem;
-}
-
-.mobile-menu{
-    position: absolute;
-    z-index: 5;
-    top:8rem;
-    padding:2rem 1rem;
-    width:100%;
-    height:500px;
-    background-color:blue;
-    /*  Insert background shawdow*/
-}
-
-.nav-links{
-    background-color:var(--white);
-    width:100%;
+.nav{
+    position: relative;
     height:auto;
-    text-align: center;
+    width: 100%;
+    padding:1rem 3rem;
+    display:flex;
+    justify-content: space-between;
+    align-items:center;
+}
+.ham{cursor: pointer;}
 
+.ham span{
+    width:20px;
+    height:2px;
+    display:block;
+    margin:3px auto;
+    background: #ffffff;
+    transition: all 0.2s ease-in-out;
+   
+    
+}
+
+
+.ham.active span:first-of-type {
+    background: rgb(255, 255, 255);
+    transform: rotate(45deg) translate(5px, 3px);
+  }
+.ham.active span:nth-last-of-type(2) {
+    opacity: 0;
+  }
+.ham.active span:last-of-type {
+    background: rgb(255, 255, 255);
+    transform: rotate(-45deg) translate(4px, -2px);
+  }
+.nav-mobile{
+    position: absolute;
+    margin:0 auto;
+    height:auto;
+    width:auto;
+    padding:20px;
+    /*display: none;*/
+   
+    align-items:center;
+    justify-content: center;
+
+    /* 80px from the top, 15px from the left and right creating the space for content */
+    top:80px;
+
+    /* Change back to -150, 400 to finalize*/
+    left:-150px;
+        right:400px;
+    background-color: #ffffff;
+    text-align: center;
+    border-radius: 5px;
+    z-index: 10;
+    box-shadow: 1px 10px 30px rgb(0 0 0 / 30%);
+    transition: all .5s ease-in .2s;
+    animation: slideOut .5s;
+    
+}
+
+.nav-mobile.active{
+    left:15px;
+    right:15px;
+    transition: all .5s ease-in .2s;
+    animation: slideIn .5s;
+    
+}
+
+@keyframes slideIn {
+    from{
+        left:-150px;
+        right:400px;
+        opactity:0;
+    }
+
+    to{
+        left:15px;
+        right:15px;
+        opacity: 1;
+    }
+
+}
+
+@keyframes slideOut {
+    from{
+        left:15px;
+        right:15px;
+    }
+
+    to{
+        left:-150px;
+        right:400px;
+    }
+}
+
+
+
+/* Drop Down Links */
+
+ul.nav-mobile-links{
+    list-style: none;
+    padding:0;
+    margin:0;
+}
+
+li.drop-down{
+    padding:.5rem 0; 
+    font-family: sans-serif;
+    position: relative;
+}
+
+.drop-down::after{
+    content:url(/icon-arrow-dark.svg);
+    position: absolute;
+    right:6.5rem;
+    transition:all 0.2s ease-in;
+    top:7px;
+}
+
+.drop-down.active::after{
+    content:url(/icon-arrow-dark.svg);
+    position: absolute;
+    right:6.5rem;
+    top:7px;
+    transform: rotate(180deg);
+}
+
+
+
+
+/* Inner Drop Down Menu */
+
+ul.inner-drop-down{
+    display: none;
+    position: relative;
+    list-style: none;
+    text-align: center;
+    padding:10px 0;
+    margin:20px 0px 20px 0px;
+    width:100%;
+    background-color:hsl(0, 0%, 91%);
+    border-radius: 5px;
+    color:hsl(207, 13%, 34%);
+}
+
+ul.inner-drop-down li{
+    padding:.5rem 0; 
+}
+
+ul.inner-drop-down.show{
+    display:block;
+    
+}
+
+
+/* Nav CTA - Login & Signup*/
+
+
+ul.nav-cta{
+    margin:0;
+    width:100%;
+    padding:10px 0 0 0;
+    list-style: none;
+    border-top: 1px solid rgb(214,212,212);
+}
+.nav-cta li{
+    padding:.5rem 0;
+    font-family: sans-serif;
+}
+
+.nav-cta li button {
+    border: none;
+    font-weight: 500;
+    text-align: center;
+    transition: all 0.4s ease-in-out;
+    cursor: pointer;
+    padding: 10px 25px;
+    font-size:1rem;
+    color: rgb(255, 255, 255);
+    border-radius: 50px;
+    background-image: linear-gradient(117deg, hsl(13, 100%, 72%) 0%, hsl(353, 100%, 62%) 100% );
 }
 
 
@@ -94,7 +251,6 @@ nav{
 .logo img{width:5rem;}
 
 /* Container for the toggle menu button */
-.ham{}
 
 
 .main-content{

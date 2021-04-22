@@ -27,23 +27,42 @@
   <main class="main">
 
     <header>
-      <nav>
+      <nav class="nav">
+          <div class="logo">
+              <img src="/images/logo.svg" alt="">
+          </div>
 
-        <div class="logo">
-          <img src="./images/logo.svg" alt="">
-        </div>
+          <!-- this is the ham button for the mobile nav menu-->
+          <div class="ham" id="ham">
+              <span></span>
+              <span></span>
+              <span></span>
+          </div>
 
-        <div class="ham mobile">
-          <img src="./images/icon-hamburger.svg" alt="">
-        </div>
+          <!-- This is the mobile menu-->
+          <div class="nav-mobile" id="nav-mobile">
+              <ul class="nav-mobile-links">
+                  <li class="drop-down">Product
+                    
+                  </li>
+                  <li class="drop-down">Company</li>
+                  <li class="drop-down" id="drop">Connect
 
-        
-        <div class="nav-links desktop"></div>
+                      <ul class="inner-drop-down" id="inner-drop-down">
+                          <li>Contact</li>
+                          <li>Newsletter</li>
+                          <li>LinkedIn</li>
+                      </ul>
+                  </li>
+              </ul>
 
-       
+              <ul class="nav-cta">
+                  <li>Login</li>
+                  <li><button>Sign Up</button></li>
+              </ul>
+          </div>
       </nav>
-    </header>
-
+  </header>
 
     <div class="main-content">
       <h1>A modern publishing platform</h1>
@@ -56,33 +75,7 @@
 
   </main>
   
-      <div class="mobile-menu">
-        <div class="nav-links mobile">
-          Product
-  
-          Overview
-          Pricing
-          Marketplace
-          Features
-          Integrations
-  
-          Company
-  
-          About
-          Team
-          Blog
-          Careers
-  
-          Connect
-  
-          Contact
-          Newsletter
-          LinkedIn
-  
-          Login
-          Sign Up
-        </div>
-      </div>
+   
 
 
 
@@ -208,6 +201,8 @@
     </div>
   </footer>
 
+
+  <script src="js/main.js"></script>
 </body>
 
 </html>
