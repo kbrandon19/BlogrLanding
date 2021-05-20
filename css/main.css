@@ -305,6 +305,16 @@ ul.nav-cta {
   margin-right: 5px;
 }
 
+.main-btn .start:hover{
+  background-color: var(--light-red);
+  border: 1px solid var(--light-red);
+  color:var(--white);
+}
+
+.main-btn .learn:hover{
+  background-color:var(--white);
+  color:var(--light-red);
+}
 /* Start of Section One */
 
 .container {
@@ -542,6 +552,12 @@ ul.nav-cta {
     border: 1px solid var(--white);
     border-radius: 50px;
     font-weight: 600;
+  }
+
+  .desktop-cta button:hover{
+    background-color: var(--light-red);
+  border: 1px solid var(--light-red);
+  color:var(--white);
   }
 
   .main-content h1 {
