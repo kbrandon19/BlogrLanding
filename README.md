@@ -31,8 +31,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://kbrandon19.github.io/BlogrLanding/)
+- Solution URL: [https://www.frontendmentor.io/solutions/blogr-landing-page-using-html-css-js-B5x8UvvSy](https://www.frontendmentor.io/solutions/blogr-landing-page-using-html-css-js-B5x8UvvSy)
+- Live Site URL: [https://kbrandon19.github.io/BlogrLanding/](https://kbrandon19.github.io/BlogrLanding/)
 
 ## My process
 
